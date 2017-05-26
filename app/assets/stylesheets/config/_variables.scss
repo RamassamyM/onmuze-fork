@@ -1,0 +1,40 @@
+/* -------------------------------------
+ * Fonts
+ * ------------------------------------- */
+// Google fonts
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Open+Sans:300,400,700|Raleway:100,300,400,500,700");
+$base-font: "Open Sans", "Helvetica", "sans-serif";
+$header-font: "Montserrat", "Helvetica", "sans-serif";
+$sub-header-font: "Raleway", "Helvetica", "sans-serif";
+
+// Local fonts (uncomment following lines)
+// @font-face {
+//   font-family: "Font Name";
+//   src: font-url('FontFile.eot');
+//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
+//        font-url('FontFile.woff') format('woff'),
+//        font-url('FontFile.ttf') format('truetype')
+// }
+// $my-font: "Font Name";
+
+// Font-size and line-height
+$base-size: 16px;
+$base-height: 1.4;
+
+/* -------------------------------------
+ * Colors
+ * ------------------------------------- */
+// Scheme
+$brand-color-red: #D23333;
+$brand-color-blue: #91e9f0;
+$brand-color-green: #00f6d2;
+
+$red: #ef5257;
+$blue: #43b5f6;
+$yellow: #feef61;
+$orange: #fba674;
+$green: #0AE7C6;
+$gray: #000000;
+$black: #0a1814;
+$dark-gray: #414141;
+$light-gray: #eeeeee;

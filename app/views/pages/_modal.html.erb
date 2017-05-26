@@ -1,0 +1,28 @@
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" id="signupModal">
+      <div class="modal-header">
+        <button type="button" class="close" id="closeCross" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center">One more step</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 text-center">
+            <%= link_to new_performance_path do %>
+              <div id="ownerModalImg">
+              </div>
+              <p class="text-center">As an artist, propose a performance</p>
+            <% end %>
+          </div>
+          <div class="col-xs-12 col-sm-6 text-center">
+            <%= link_to new_place_path do %>
+              <div id="artistModalImg">
+              </div>
+              <p class="text-center">As an organizer, create a place to organize events</p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

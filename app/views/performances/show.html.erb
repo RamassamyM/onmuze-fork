@@ -1,0 +1,42 @@
+<% if @performance.banner %>
+  <div class="banner-show" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= cl_image_path @performance.banner.path %>');">
+  </div>
+<% else %>
+  <%= render 'shared/banner-with-asset', asset_url: image_url('artist.png') %>
+<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="text-center">
+            <h1><%= @performance.name %></h1>
+          </div>
+          <div>
+            <p><strong>Genre : </strong><%= @performance.genre.event_type %> <%= @performance.genre.name %></p>
+            <p><strong>Address : </strong><%= @performance.address %></p>
+            <p><strong>Description : </strong><%= @performance.description %></p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="video-block">
+            <%# @embedded_video %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="right-block">
+        <%= right_block_performance_show_render(@performance, @proposal) %>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <% if user_signed_in? %>
+  <%= render 'shared/modal', content: 'events/content_event_modal', title: 'Create an event', modal_id: 'newEventModal', arguments: { event: @event, places: current_user.places } %>
+  <% end %>
+</div>
+<% content_for :title, @performance.name %>
